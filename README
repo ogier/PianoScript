@@ -1,0 +1,12 @@
+PianoScript - An interpreted scripting language that
+is highly optimized for piano printing purposes.
+
+=== Files Included ===
+
+README - This file.
+
+PianoScript.cs - Parses a PianoScript file and interprets any instructions it contains.
+    Usage:
+        PianoScript <script>.ps [arguments]
+
+piano.ps - A sample PianoScript file.
