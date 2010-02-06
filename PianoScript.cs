@@ -22,7 +22,7 @@ class PianoScript
         int length = numkeys * 5 + 1;
 
         int start = "CDEFGAB".IndexOf(key[0]) * 5;
-        if (key.Length > 1 && key[1] == '#' && "CDFGA".Contains(key[0]))
+        if (key.Length > 1 && key[1] == '#' && "CDFGA".Contains(key[0].ToString()))
         {
             start += 4;
             length += 1;
@@ -52,13 +52,10 @@ class PianoScript
         if (script.ToLower().Contains("go"))
         {
             string key = args[1];
-            int length = int.Parse(args[2]) * 5 + 1;
+            int numkeys = int.Parse(args[2]);
+
+            Go(key, numkeys);
         }
-
-        string key = args[1];
-        int numkeys = int.Parse(args[2]);
-
-        Go(key, numkeys);
     }
     
     // Parses a PianoScript file and interprets any instructions it contains.
